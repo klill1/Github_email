@@ -12,10 +12,16 @@ jobs:
           server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: Message from TARge21.
+          subject: ALERT! SB IS PUSHING CODE INTO YOUR REPO!
           to: kert.lillemets@gmail.com
           from: Github actions
-          body: MIDA SA AJAD
+          body: See on väga tore üritus.
+      - run: echo "Kehtestuse looja nimi:${{github.event.pusher.name}}"
+      - run: echo "Repositooriumi nimi:${{github.repository}}"
+
+
+  
+
 
 
 
